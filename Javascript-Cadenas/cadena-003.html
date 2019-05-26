@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var cadena=prompt("Introduce una cadena");
+            var caracter=prompt("Escriba un caracter");
+            var con2=0;
+            while (caracter.length>1)
+            {
+                var caracter=prompt("Has escrito mas de un caracter, escribe un caracter");
+            }   
+            for (var cont=0; cont<cadena.length; cont++)
+            {
+                if (cadena[cont]===caracter)
+                {
+                    con2++;
+                }
+            }
+            $("#resultado").html("El caracter '"+caracter+"' se encuentra "+con2+" en la cadena introducida anteriormente");
+        });
+        </script>
+</head>
+<body>
+    <p id="resultado"></p>
+</body>
+</html>
